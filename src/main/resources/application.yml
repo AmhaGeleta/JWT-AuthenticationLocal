@@ -1,0 +1,26 @@
+spring:
+    application:
+        name: JWT.demo
+
+    datasource:
+        url: jdbc:mysql://localhost:3306/ea
+        username: root
+        password: P@ssword21
+        driverClassName: com.mysql.cj.jdbc.Driver
+        hikari:
+            maximumPoolSize: 10
+
+    jpa:
+        show-sql: true
+        hibernate:
+            naming:
+                physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+                implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL8Dialect
+logging:
+    file:
+        name: /Coding/Logging/${spring.application.name}/log
+server :
+    port : 9090
